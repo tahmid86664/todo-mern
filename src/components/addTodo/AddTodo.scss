@@ -1,0 +1,63 @@
+.addTodo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+
+  form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.39);
+    -webkit-box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.39);
+
+    span {
+      font-size: 18px;
+      color: #292929;
+      margin-bottom: 5px;
+    }
+
+    input {
+      padding: 10px 8px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      border-color: #001238;
+      transition: all 0.4s ease;
+      outline-width: 0;
+
+      &:hover {
+        border-color: #023ec2;
+      }
+    }
+
+    textarea {
+      padding: 10px 8px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      border-color: #001238;
+      transition: all 0.4s ease;
+      outline-width: 0;
+
+      &:hover {
+        border-color: #023ec2;
+      }
+    }
+
+    button {
+      height: 40px;
+      border: none;
+      font-size: 16px;
+      color: white;
+      background-color: #001238;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

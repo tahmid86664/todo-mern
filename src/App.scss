@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: burlywood;
+
+  .body {
+    height: calc(100vh - 60px);
+    background-color: #b9ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
