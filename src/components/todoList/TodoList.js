@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./TodoList.scss";
+import { AppContext } from "../../context/AppContext";
 import Todo from "../todo/Todo";
 
 const TodoList = () => {
+  const { todos } = useContext(AppContext);
+
   return (
     <div className="todoList">
-      <Todo id={1} />
-      <Todo id={2} />
-      <Todo id={3} />
-      <Todo id={4} />
-      <Todo id={5} />
+      {todos.map((todo) => (
+        <Todo
+          key={todo.id}
+          id={todo.id}
+          title={todo.title}
+          desc={todo.desc}
+          reminder={todo.reminder}
+        />
+      ))}
     </div>
   );
 };

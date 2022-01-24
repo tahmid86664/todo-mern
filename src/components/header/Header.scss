@@ -12,12 +12,26 @@
   }
 
   .account {
+    .userButton {
+      text-decoration: none;
+      color: white;
+      margin-right: 15px;
+
+      &:hover {
+        color: #ff5e5e;
+      }
+    }
     span {
       margin-right: 15px;
       cursor: pointer;
 
-      &:hover {
-        color: #ff5e5e;
+      a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          color: #ff5e5e;
+        }
       }
     }
   }
