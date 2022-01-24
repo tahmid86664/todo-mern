@@ -24,6 +24,40 @@ export const StateProvider = ({ children }) => {
     });
   };
 
+  const doneTodo = (id) => {
+    dispatch({
+      type: "DONE_TODO",
+      payload: id,
+    });
+  };
+
+  const deleteCompletedTodo = (id) => {
+    dispatch({
+      type: "DELETE_COMPLETED_TODO",
+      payload: id,
+    });
+  };
+
+  const deleteAllCompletedTodo = () => {
+    dispatch({
+      type: "DELETE_ALL_COMPLETED_TODO",
+    });
+  };
+
+  const updateTodo = (todo) => {
+    dispatch({
+      type: "UPDATE_TODO",
+      payload: todo,
+    });
+  };
+
+  const updateUser = (user) => {
+    dispatch({
+      type: "UPDATE_USER",
+      payload: user,
+    });
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -32,6 +66,11 @@ export const StateProvider = ({ children }) => {
         completedTodos: state.completedTodos,
         deleteTodo,
         addTodo,
+        doneTodo,
+        deleteCompletedTodo,
+        deleteAllCompletedTodo,
+        updateTodo,
+        updateUser,
       }}
     >
       {children}

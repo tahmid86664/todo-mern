@@ -16,6 +16,7 @@ const AddTodo = () => {
       title: title,
       desc: desc,
       reminder: reminder,
+      timestamp: new Date().toLocaleString(),
     };
 
     addTodo(todo);

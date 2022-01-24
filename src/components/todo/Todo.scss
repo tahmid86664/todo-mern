@@ -19,9 +19,18 @@
     margin-bottom: 8px;
   }
 
-  .todo__reminder {
+  .todo__bottom {
+    display: flex;
+    justify-content: space-between;
     margin: 8px 0;
-    text-align: end;
+
+    .todo__reminder {
+      text-align: end;
+    }
+
+    .todo__updateStatus {
+      color: #00810b;
+    }
   }
 
   .todo__buttons {
@@ -49,6 +58,68 @@
 
     .todo__doneButton {
       background-color: #1cf72f;
+    }
+  }
+}
+
+.editForm {
+  display: none;
+  flex-direction: column;
+  width: 70%;
+  padding: 10px;
+  min-width: 200px;
+  margin: 15px 0 15px 50px;
+  box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.28);
+  -webkit-box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.28);
+
+  span {
+    font-size: 16px;
+    color: #292929;
+    margin-bottom: 5px;
+  }
+
+  input {
+    padding: 5px 5px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    border-color: #001238;
+    transition: all 0.4s ease;
+    outline-width: 0;
+
+    &:hover {
+      border-color: #023ec2;
+    }
+  }
+
+  textarea {
+    padding: 5px 5px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    border-color: #001238;
+    transition: all 0.4s ease;
+    outline-width: 0;
+
+    &:hover {
+      border-color: #023ec2;
+    }
+  }
+
+  button {
+    height: 30px;
+    border: none;
+    font-size: 14px;
+    color: white;
+    background-color: #001238;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.disabled {
+      opacity: 0.4;
+      cursor: default;
     }
   }
 }
