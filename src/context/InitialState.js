@@ -1,9 +1,10 @@
 export const initialState = {
+  // user:null,
   user: {
     id: 1,
     username: "tahmid",
     password: "12345",
-    img: "https://avatars.dicebear.com/api/human/1.svg"
+    img: "https://avatars.dicebear.com/api/human/1.svg",
   },
   todos: [
     {
